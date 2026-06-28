@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Tic Tac Toe</title>
+
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="stylesheet" href="styles/board.css">
+    <link rel="stylesheet" href="styles/cells.css">
+    <link rel="stylesheet" href="styles/moves.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/color-picker.css">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"><meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="tooltip"></div>
+
+<div class="moves">
+    <div class="moves-panel">
+        <div class="header">
+            <div class="cross">✖</div>
+            <div class="nought">⬤</div>
+        </div>
+        <div class="moves-div">
+            <div class="moves-grid"></div>
+        </div>
+    </div>
+    <div class="moves-label">✖ MOVES ✖</div>
+</div>
+
+<div class="color-wrapper">
+    <div class="color-palette">
+        <div class="color-box background" data-var="--background-color">
+            <input type="color" class="color-input">
+        </div>
+        <div class="color-box secondary" data-var="--secondary-color">
+            <input type="color" class="color-input">
+        </div>
+        <div class="color-box accent" data-var="--accent-color">
+            <input type="color" class="color-input">
+        </div>
+    </div>
+</div></div>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="player-info">
+            <div class="credits">
+                <p>T</p>
+                <p>U</p>
+                <p>R</p>
+                <p>N</p>
+            </div>
+            <div class="turn">✖</div>
+        </div>
+        <div class="big-board">
+        </div>
+        <div class="win-div">
+            <div class="credits">
+                <p>W</p>
+                <p>I</p>
+                <p>N</p>
+            </div>
+            <div class="winner">?</div>
+        </div>
+    </div>
+
+    <div class="title">
+        ⬤ ULTIMATE TIC TAC TOE ⬤
+    </div>
+
+    <div class="author">
+        by Nehul Malhotra
+    </div>
+</div>
+
+<div class="settings-pane">
+    <div class="settings-panel">
+
+        <div class="player-settings">
+            <div class="player-icon cross-icon">Cross</div>
+
+            <div class="setting-row enable">
+                <span>Minimax</span>
+                <label class="switch">
+                    <input class="enable-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row heuristic">
+                <span>Heuristic</span>
+                <label class="switch">
+                    <input class="heuristic-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row dependent">
+                <span>Pruning</span>
+
+                <div class="tri-switch" data-state="0">
+                    <div class="tri-knob">✖</div>
+                </div>
+            </div>
+
+            <div class="setting-row dependent">
+                <span>Depth</span>
+
+                <input
+                        class="depth-input"
+                        type="number"
+                        min="1"
+                        max="10"
+                        value="5"
+                >
+            </div>
+        </div>
+
+        <div class="player-settings">
+            <div class="player-icon nought-icon">Nought</div>
+
+            <div class="setting-row enable">
+                <span>Minimax</span>
+                <label class="switch">
+                    <input class="enable-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row heuristic">
+                <span>Heuristic</span>
+                <label class="switch">
+                    <input class="heuristic-toggle" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="setting-row dependent">
+                <span>Pruning</span>
+
+                <div class="tri-switch" data-state="0">
+                    <div class="tri-knob">✖</div>
+                </div>
+            </div>
+
+            <div class="setting-row dependent">
+                <span>Depth</span>
+
+                <input
+                        class="depth-input"
+                        type="number"
+                        min="1"
+                        max="10"
+                        value="5"
+                >
+            </div>
+        </div>
+
+        <div class="continue">
+            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+    </div>
+</div>
+
+<script src="scripts/color-picker.js"></script>
+<script src="scripts/tooltip.js"></script>
+<script src="scripts/settings.js"></script>
+<script src="scripts/basic_functions.js"></script>
+
+<script src="scripts/uttt_functions.js"></script>
+<script src="scripts/grid.js"></script>
+
+<script src="scripts/analysis.js"></script>
+
+<script src="scripts/bot.js"></script>
+<script src="scripts/minimax.js"></script>
+<script src="scripts/heuristic.js"></script>
+
+
+<script src="scripts/index.js"></script>
+</body>
+</html>

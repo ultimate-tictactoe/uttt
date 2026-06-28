@@ -1,0 +1,136 @@
+.moves{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.moves-panel {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px 0;
+    color: var(--secondary-color);
+    z-index: 99;
+    background-color: var(--background-color);
+    user-select: none;
+}
+
+.cross, .nought{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cross{
+    border-right: 3px solid var(--secondary-color);
+}
+
+.moves-div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;  /* was 'center' — that's why scroll-to-top breaks */
+    justify-content: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex: 1;               /* take all remaining height after the header */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.cross-turns, .nought-turns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.moves-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding-top: 25px;
+    position: relative;
+}
+
+.move-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moves-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+}
+
+.cross-box, .nought-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin: 7px 0;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: var(--secondary-color);
+    font-size: 18px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-style: italic;
+}
+
+.cross-box::selection, .nought-box::selection{
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.cross-box:hover, .nought-box:hover{
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.moves-label {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    letter-spacing: 4px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    align-self: center;
+    user-select: none;
+    border-left: 4px solid rgba(0,0,0,.3);
+    transition: all 0.3s ease-out;
+}

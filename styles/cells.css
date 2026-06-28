@@ -1,0 +1,49 @@
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 900;
+    transition: background-color 0.8s ease-out, color 0.8s ease-out, transform 0.2s ease, rotate 0.2s ease;
+    border-radius: 6px;
+}
+
+.open-cell{
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.open-cell:hover {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    transform: scale(0.9);
+    rotate: 3deg;
+}
+
+.closed-cell {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    cursor: default;
+}
+
+.clicked-cell{
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    cursor: default;
+}
+
+.closed-sleeping-cell{
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    opacity: 0.2;
+}
+
+.open-sleeping-cell{
+    box-sizing: border-box;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--background-color);
+    opacity: 0.2;
+}
