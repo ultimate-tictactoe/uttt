@@ -51,6 +51,8 @@ addTooltip("Winner", "winner");
 addTooltip("Current Turn", "turn");
 
 addTooltip("Title", "title");
+addTooltip("Recommended settings to play against: " +
+    "MINIMAX at DEPTH 7 or 5 and 'PRUNING' setting to 'H' (heuristic)", "info");
 
 addTooltip("Start", "continue");
 addTooltip("Cross Settings", "cross-icon");
