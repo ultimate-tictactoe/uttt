@@ -33,6 +33,7 @@ body{
     top: 0;
 
     padding: 6px 10px;
+    max-width: 20vw;
 
     /* background: var(--background-color);
     color: var(--secondary-color); */
