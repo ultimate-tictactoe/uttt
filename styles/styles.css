@@ -54,7 +54,7 @@ body{
 
     display: none;
 
-    transform: translate(15px, 15px);
+    transform: translate(15px, 0);
     transition: opacity .4s ease;
 }
 
@@ -77,4 +77,29 @@ body{
     opacity: 1;
     display: block;
     transform: translateY(0);
+}
+
+.info{
+    position: absolute;
+    left: 50vw;
+    bottom: 5vh;
+    cursor: pointer;
+
+    padding: 10px;
+    border-radius: 100px;
+
+    background: rgba(0,0,0,.3);
+    border-bottom: 5px solid rgba(0,0,0,.3);
+    color: var(--secondary-color);
+
+    width: 20px;
+    height: 20px;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    font-family: 'Space Mono', sans-serif;
+    font-weight: bold;
+    font-style: italic;
 }
